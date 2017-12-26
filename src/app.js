@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import AppRouter from './routers/AppRouter';
@@ -11,14 +11,6 @@ import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
-
-// store.dispatch(setTextFilter("bill"));
-
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(
-  state.expenses,
-  state.filters
-);
 
 const jsx = (
   <Provider store={store}>
