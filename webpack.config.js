@@ -45,7 +45,7 @@ module.exports = env => {
       : 'inline-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
-      historyApiFallback: true // for React Router - it causes the page transition to fallback to index.html whenever
+      historyApiFallback: true
     }
   };
 };
