@@ -9,16 +9,14 @@ import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import './firebase/firebase';
 
 const store = configureStore();
 
 // store.dispatch(setTextFilter("bill"));
 
 const state = store.getState();
-const visibleExpenses = getVisibleExpenses(
-  state.expenses,
-  state.filters
-);
+const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 
 const jsx = (
   <Provider store={store}>
