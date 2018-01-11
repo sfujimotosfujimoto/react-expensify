@@ -13,6 +13,11 @@
   'yarn run dev-server'
   ```
 
+* to test
+  ```javascript
+  'yarn test --watch' //watch flag watches for changes
+  ```
+
 # Git cmd
 
 git init - create a new git repo
