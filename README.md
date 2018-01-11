@@ -10,7 +10,7 @@
   ```
 * using webpack-dev-server
   ```javascript
-  'yarn run dev-server
+  'yarn run dev-server'
   ```
 
 # Git cmd
