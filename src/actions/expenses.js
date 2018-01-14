@@ -8,7 +8,7 @@ export const addExpense = expense => ({
   type: "ADD_EXPENSE",
   expense
 });
-
+// START ADD EXPENSE
 export const startAddExpense = (expenseData = {}) => {
   // returning a function only works because of redux-thunk
   return dispatch => {
@@ -38,6 +38,11 @@ export const startAddExpense = (expenseData = {}) => {
       });
   };
 };
+////
+
+/**
+ * START EDIT EXPENSE
+ **/
 
 export const editExpense = (id, updates) => ({
   type: "EDIT_EXPENSE",
@@ -45,6 +50,22 @@ export const editExpense = (id, updates) => ({
   updates
 });
 
+export const startEditExpense = (id, updates) => {
+  return dispatch => {
+    return database
+      .ref(`expenses/${id}`)
+      .update(updates)
+      .then(() => {
+        dispatch(editExpense(id, updates));
+      });
+  };
+};
+
+//
+
+/**
+ * START REMOVE EXPENSE
+ **/
 export const removeExpense = ({ id } = {}) => ({
   type: "REMOVE_EXPENSE",
   id
@@ -61,7 +82,10 @@ export const startRemoveExpense = ({ id } = {}) => {
   };
 };
 
-// SET EXPENSES
+/**
+ * SET EXPENSES
+ **/
+
 export const setExpenses = expenses => ({
   type: "SET_EXPENSES",
   expenses
