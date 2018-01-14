@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%; // to make 1rem 10px
 }
 body {
+  color: $dark-grey;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.6rem;
+  font-size: $m-size;
+  line-height: 1.6;
 }
 
 button {
@@ -19,4 +25,3 @@ button:focus {
 .is-active {
   font-weight: bold;
 }
-
